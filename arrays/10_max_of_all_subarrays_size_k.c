@@ -4,21 +4,9 @@
 
 int a[10000000];
 
+// Can be improved using a balanced BST or a deque.
+// TODO: C++ optimized implementation.
 
-int max(int a, int b) {
-    return (a>b) ? a : b;
-}
-
-void swap(int *a, int *b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-    return;
-}
-
-int compare(const void * a, const void * b) {
-    return (*(int *)a - *(int *)b);
-}
 
 int main() {
 	//code
@@ -33,6 +21,15 @@ int main() {
         }
         
         // processing
+        for (int i=0; i<=n-k; i++) {
+            int max = a[i];
+            for (int j=1; j<k; j++) {
+                if (a[i+j] > max)
+                    max = a[i+j];
+            }
+            printf("%d ", max);
+        }
+        printf("\n");
         
         
 

@@ -1,14 +1,5 @@
 
-    // while (l <=r ) {
-    //     if (arr[l] > pivot && arr[r] < pivot) {
-    //         swap(&arr[l++], &arr[r--]);
-    //     }
-    //     if (arr[l] <= pivot) {
-    //         l++;
-    //     }
-    //     if (arr[r] >= pivot) {
-    //         r--;
-    //     }
-    // }
-    // swap(&arr[left], &arr[l]);
-    // return r;
+// void area(int a[], int i, int j) {
+//     // area without considering blocks inside (i, j)
+//     return min(a[i], a[j])*(j-i-1);
+// }

@@ -8,10 +8,6 @@ int min(int a, int b) {
     return (a<b) ? a : b;
 }
 
-// void area(int a[], int i, int j) {
-//     // area without considering blocks inside (i, j)
-//     return min(a[i], a[j])*(j-i-1);
-// }
 int main() {
     freopen("trapping_rain_water.txt", "r", stdin);
     int t;

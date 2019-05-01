@@ -5,6 +5,7 @@
 #include <ctype.h>
 
 #include <stdlib.h>
+// stdlib also has bsearch for binary search
 
 #include <string.h>
 

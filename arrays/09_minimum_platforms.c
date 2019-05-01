@@ -2,10 +2,10 @@
 #include <string.h>
 #include <stdlib.h>
 
-// THIS CODE IS NOT ACCEPTED 
+// CODE is not being accepted! 
+
 int a[1003];
 int d[1003];
-// int overlap[1003];
 
 int max(int a, int b) {
     return (a>b) ? a : b;
@@ -16,9 +16,6 @@ void swap(int *a, int *b) {
     *a = *b;
     *b = temp;
     return;
-}
-int isOverlap(int t1a, int t1d, int t2a, int t2d) {
-    return ((t1d >= t2a) && (t2d >= t1a));
 }
 
 int compare(const void * a, const void * b) {
@@ -52,7 +49,7 @@ int main() {
 
         while (i<n && j<n) {
             if (a[i] <= d[j]) {
-                // next even in timeline is an arrival
+                // next event in timeline is an arrival
                 curr_platforms++;
                 i++;
 

@@ -18,6 +18,10 @@ int main() {
         for (int i=0; i<n; i++) {
             scanf("%d", &a[i]);
         }
+
+        // Rather than sorting, we can also
+        // count numbers of ones and zeros
+        // and then print the zeros and ones.
         
         qsort(a, n, sizeof(int), compfunc);
         for (int i=0; i<n; i++) {

@@ -32,19 +32,30 @@ int main() {
         }
 
         // printArr(a, n);
+        
+        int profit_flag = 0;
 
         int buy = a[0];
         int buy_index = 0;
         for (int i=1; i<n; i++) {
-            if (a[i] < buy) {
-                printf("(%d %d) ",buy_index, i);
+            // int possible_profit = a[i-1]-buy;
+            // int possible_loss = a[i] 
+            int possible_profit = a[i-1]-buy;
+            int possible_loss = a[i]-buy;
+            if (possible_profit>possible_loss) {
+                if (buy_index!=i-1) {
+                    printf("(%d %d) ",buy_index, i-1);
+                    profit_flag = 1;
+                }
                 buy = a[i];
                 buy_index = i;
             }
         }
         if (buy < a[n-1] && (buy_index!= n-1)) {
             printf("(%d %d) ", buy_index, n-1);
+            profit_flag = 1;
         }
+        if (!profit_flag) printf("No Profit");
         printf("\n");
     }
 	return 0;

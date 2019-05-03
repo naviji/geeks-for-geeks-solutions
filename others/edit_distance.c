@@ -74,7 +74,7 @@ int edit_distance_iter(char a[], char b[], int m, int n) {
 
 int main() {
     char a[] = "iyrgiushdiugahfhahfkhdkdsfnksdnlgidsfsd";
-    char b[] = "clxkjvosdhgowjohgdsnkfjhoqp;jrpqjprojqpwojr";
+    char b[] = "clxkjvosdhgowjohgdsnkfjhoqpjrpqjprojqpwojr";
 
     int len_a = strlen(a);
     int len_b = strlen(b);

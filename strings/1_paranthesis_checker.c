@@ -2,6 +2,12 @@
 #include <string.h>
 
 // Does not give correct result for [(])
+// The correct way is to use a stack.
+// when seeing open brackets; push to stack
+// when seeing close brackets, check stack not empty
+// and that brackets are of same type.
+// if stack is empty after processing string.. balanced
+// else unbalanced.
 
 char s[100000];
 
@@ -29,6 +35,7 @@ int checkBalanced(char s[], int i, int size, int nc, int ns, int np) {
 }
 
 int main() {
+    freopen("paranthesis_checker.txt", "r", stdin);
     int t;
     scanf("%d", &t);
     while (t--) {

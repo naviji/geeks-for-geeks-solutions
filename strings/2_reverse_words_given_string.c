@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 char s[2000];
 char a[2000][2000];
@@ -28,7 +29,9 @@ int main() {
     scanf("%s", s);
     int n = joinStrings(a, s);
     for (int i=n-1; i>=0; i--) {
-      printf("%s.", a[i]);
+      if (i==0) printf("%s\n", a[i]);
+      else
+        printf("%s.", a[i]);
     }
 
   }

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 
-// Not completed.
+// Function works but code to receive input is not correct.
 
 struct Node {
     int data;
@@ -23,13 +23,13 @@ int getMiddle();
 struct Node* reverse(struct Node* start);
 void rotateCounterClockWise(struct Node** head, int k);
 void rotateClockWise(struct Node** head, int k);
-
-
 struct Node* reverse_group(struct Node* head, int k);
+
+int detectLoop(struct Node* head);
 
 
 int main() {
-    freopen("reverse_group.txt", "r", stdin);
+    freopen("detect_loop.txt", "r", stdin);
     int t, n, x, k;
     scanf("%d", &t);
     while (t--) {
@@ -49,6 +49,28 @@ int main() {
         deleteList();
     }
 }
+
+int detectloop(struct Node *head)
+{
+    
+    Node* fast = head;
+    Node* slow = head;
+    while (slow && fast && fast->next) {
+        slow = slow->next;
+        fast = fast->next->next;
+        
+        if (slow == fast) {
+            // Loop exits;
+            return 1;
+        }
+        
+    }
+    return 0;
+}
+
+
+
+
 
 void rotateCounterClockWise(struct Node** head_ref, int k) {
     struct Node* oldHead = *head_ref;

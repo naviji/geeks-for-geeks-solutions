@@ -1,6 +1,7 @@
 # Ignore all
 *
 
+# .vscode/*
 # Unignore all with extensions
 !*.*
 
@@ -32,3 +33,6 @@ bin/
 
 */tempCodeRunnerFile.c
 #
+*.ipch
+*.bin
+*.exe
